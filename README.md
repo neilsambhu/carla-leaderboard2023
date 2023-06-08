@@ -30,5 +30,5 @@ scripts/route_creator.py:    elif option == RoadOption.STRAIGHT:  # Gray
 ```
 6/8/2023 3:57:02 PM: find training code:
 ```
-grep -r -e "train" > outgrep.txt
+grep -r --exclude outgrep.txt -e "train" > outgrep.txt
 ```
