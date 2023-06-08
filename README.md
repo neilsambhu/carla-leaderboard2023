@@ -28,3 +28,7 @@ scripts/route_creator.py:    elif option == RoadOption.CHANGELANELEFT:  # Orange
 scripts/route_creator.py:    elif option == RoadOption.CHANGELANERIGHT:  # Dark Cyan
 scripts/route_creator.py:    elif option == RoadOption.STRAIGHT:  # Gray
 ```
+6/8/2023 3:57:02 PM: find training code:
+```
+grep -r -e "train" |& tee outgrep.txt
+```
