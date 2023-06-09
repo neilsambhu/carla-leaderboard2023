@@ -68,3 +68,7 @@ ModuleNotFoundError: No module named 'agents.navigation.global_route_planner_dao
 ```
 grep -r --exclude outgrep.txt -e "sensors" |& tee outgrep.txt
 ```
+6/9/2023 6:25:22 PM: grep sensor rgb data
+```
+grep -r --exclude outgrep.txt -e "sensor.camera.rgb" |& tee outgrep.txt
+```
