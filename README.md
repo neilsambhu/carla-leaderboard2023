@@ -64,3 +64,7 @@ Traceback (most recent call last):
     from agents.navigation.global_route_planner_dao import GlobalRoutePlannerDAO
 ModuleNotFoundError: No module named 'agents.navigation.global_route_planner_dao'
 ```
+6/9/2023 6:17:47 PM: grep sensor data
+```
+grep -r --exclude outgrep.txt -e "sensors" |& tee outgrep.txt
+```
