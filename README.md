@@ -38,3 +38,13 @@ grep -r --exclude outgrep.txt -e "train" > outgrep.txt
 ```
 grep -r --exclude outgrep.txt -e "endpoint" |& tee outgrep.txt
 ```
+6/9/2023 3:28 PM: error message 
+```
+(interfuser) nsambhu@SAMBHU19:~/github/InterFuser$ CUDA_VISIBLE_DEVICES=0 ./leaderboard/scripts/run_evaluation.sh
+Traceback (most recent call last):
+  File "leaderboard/leaderboard/leaderboard_evaluator.py", line 489, in <module>
+    main()
+  File "leaderboard/leaderboard/leaderboard_evaluator.py", line 476, in main
+    statistics_manager = StatisticsManager()
+TypeError: __init__() missing 2 required positional arguments: 'endpoint' and 'debug_endpoint'
+```
