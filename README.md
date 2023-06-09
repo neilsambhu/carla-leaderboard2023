@@ -33,3 +33,8 @@ scripts/route_creator.py:    elif option == RoadOption.STRAIGHT:  # Gray
 grep -r --exclude outgrep.txt -e "train" > outgrep.txt
 ```
 6/8/2023 6:04:33 PM: TODO: how do I move forward with the end objective being to use the routes_training.xml?  
+## InterFuser
+6/9/2023 3:15 PM: grep "endpoint"
+```
+grep -r --exclude outgrep.txt -e "endpoint" |& tee outgrep.txt
+```
