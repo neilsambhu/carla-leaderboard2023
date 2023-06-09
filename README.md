@@ -48,3 +48,19 @@ Traceback (most recent call last):
     statistics_manager = StatisticsManager()
 TypeError: __init__() missing 2 required positional arguments: 'endpoint' and 'debug_endpoint'
 ```
+6/9/2023 3:49 PM: set ~/.bashrc to InterFuser paths
+```
+(interfuser) nsambhu@SAMBHU19:~/github/InterFuser$ CUDA_VISIBLE_DEVICES=0 ./leaderboard/scripts/run_evaluation.sh
+Traceback (most recent call last):
+  File "leaderboard/leaderboard/leaderboard_evaluator.py", line 34, in <module>
+    from leaderboard.scenarios.scenario_manager import ScenarioManager
+  File "/home/nsambhu/github/InterFuser/leaderboard/leaderboard/scenarios/scenario_manager.py", line 25, in <module>
+    from leaderboard.autoagents.agent_wrapper import AgentWrapper, AgentError
+  File "/home/nsambhu/github/InterFuser/leaderboard/leaderboard/autoagents/agent_wrapper.py", line 21, in <module>
+    from leaderboard.autoagents.autonomous_agent import Track
+  File "/home/nsambhu/github/InterFuser/leaderboard/leaderboard/autoagents/autonomous_agent.py", line 17, in <module>
+    from leaderboard.utils.route_manipulation import downsample_route
+  File "/home/nsambhu/github/InterFuser/leaderboard/leaderboard/utils/route_manipulation.py", line 17, in <module>
+    from agents.navigation.global_route_planner_dao import GlobalRoutePlannerDAO
+ModuleNotFoundError: No module named 'agents.navigation.global_route_planner_dao'
+```
