@@ -74,6 +74,7 @@ grep -r --exclude outgrep.txt -e "sensor.camera.rgb" |& tee outgrep.txt
 ```
 6/10/2023 11:29:20 AM: InterFuser results Town05
 ```
+(interfuser) nsambhu@SAMBHU19:~/github/InterFuser$ ./leaderboard/scripts/run_evaluation.sh
 ========= Preparing RouteScenario_16 (repetition 0) =========
 > Setting up the agent
 load model: leaderboard/team_code/interfuser.pth.tar
