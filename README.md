@@ -681,7 +681,10 @@ leaderboard/autoagents/agent_wrapper.py:        for sensor_spec in self._agent.s
 leaderboard/leaderboard_evaluator.py:                self.sensors = self.agent_instance.sensors()
 ```
 6/12/2023 3:08 PM: find calls to ".sensors"
-
 ```
 grep -r --exclude outgrep.txt -e ".sensors" |& tee outgrep.txt
+```
+6/12/2023 7:42:46 PM: find calls to "NPCAgent"
+```
+grep -r --exclude outgrep.txt -e "NpcAgent" |& tee outgrep.txt
 ```
