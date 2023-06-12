@@ -667,3 +667,7 @@ load
 > Registering the route statistics
 > Registering the global statistics
 ```
+6/12/2023 2:59 PM: test_run.sh is successful. grep rgb sensor data.
+```
+grep -r --exclude outgrep.txt -e "sensor.camera.rgb" |& tee outgrep.txt
+```
