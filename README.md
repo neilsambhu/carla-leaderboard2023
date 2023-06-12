@@ -675,3 +675,13 @@ grep -r --exclude outgrep.txt -e "sensor.camera.rgb" |& tee outgrep.txt
 ```
 grep -r --exclude outgrep.txt -e "sensors()" |& tee outgrep.txt
 ```
+```
+leaderboard/autoagents/agent_wrapper.py:        for sensor_spec in self._agent.sensors():
+leaderboard/autoagents/agent_wrapper.py:        for sensor_spec in self._agent.sensors():
+leaderboard/leaderboard_evaluator.py:                self.sensors = self.agent_instance.sensors()
+```
+6/12/2023 3:08 PM: find calls to ".sensors"
+
+```
+grep -r --exclude outgrep.txt -e ".sensors" |& tee outgrep.txt
+```
