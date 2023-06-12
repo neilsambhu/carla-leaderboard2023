@@ -671,3 +671,7 @@ load
 ```
 grep -r --exclude outgrep.txt -e "sensor.camera.rgb" |& tee outgrep.txt
 ```
+6/12/2023 3:08 PM: find calls to npc_agent.py > sensors() method
+```
+grep -r --exclude outgrep.txt -e "sensors()" |& tee outgrep.txt
+```
