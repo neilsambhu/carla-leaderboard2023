@@ -689,3 +689,7 @@ grep -r --exclude outgrep.txt -e ".sensors" |& tee outgrep.txt
 grep -r --exclude outgrep.txt -e "NpcAgent" |& tee outgrep.txt
 ```
 6/13/2023 4:16 PM: RGB image data saved to hard disk. TODO: output vehicle control signal.  
+6/14/2023 5:00 PM: find "sensor"
+```
+grep -r --exclude outgrep.txt -e "sensor" |& tee outgrep.txt
+```
