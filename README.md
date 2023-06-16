@@ -693,3 +693,7 @@ grep -r --exclude outgrep.txt -e "NpcAgent" |& tee outgrep.txt
 ```
 grep -r --exclude outgrep.txt -e "sensor" |& tee outgrep.txt
 ```
+6/16/2023 3:46 PM: leaderboard_evaluator.py has self.sensors. Find calls to LeaderboardEvaluator.  
+```
+grep -r --exclude outgrep.txt -e "LeaderboardEvaluator" |& tee outgrep.txt
+```
