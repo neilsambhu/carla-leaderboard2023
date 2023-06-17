@@ -213,7 +213,9 @@ class BasicAgent(object):
             control = self.add_emergency_stop(control)
 
         if bVerbose:
-            print(f'control: {control}')
+            print(f'control before: {control}')
+            control = carla.VehicleControl(throttle=0.5, steer=0)
+            print(f'control before: {control}')
 
         return control
 
