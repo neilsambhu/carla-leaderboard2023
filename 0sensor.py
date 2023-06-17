@@ -18,6 +18,7 @@ sensor_bp = blueprint_library.find('sensor.camera.rgb')
 sensor_transform = carla.Transform(carla.Location(x=1.5, z=2.4))  # Set the relative position of the sensor
 sensor = world.spawn_actor(sensor_bp, sensor_transform, attach_to=vehicle)
 
+frame_global_context = None
 def process_sensor_data(sensor_data):
     # Access the sensor data and perform desired operations
     # image = sensor_data.as_rgb()  # Example: Convert sensor data to an RGB image
@@ -37,8 +38,7 @@ def process_sensor_data(sensor_data):
     # Convert BGRA to RGB
     image_rgb = cv2.cvtColor(image_bgra, cv2.COLOR_BGRA2RGB)
     im = Image.fromarray(image_rgb)
-    im.save("img.jpeg")
-
+    im.save(f'frames/img_{frame_global_context:03}.jpeg')
 
 sensor.listen(process_sensor_data)
 
@@ -46,9 +46,17 @@ sensor.listen(process_sensor_data)
 # world.tick()
 
 # Or run the simulation for a specified number of frames
-num_frames = 2
+num_frames = 300
 for frame in range(num_frames):
+    frame_global_context = frame
     print(f'frame {frame}')
+    # Set the desired throttle and steering values for driving straight
+    throttle = 0.5  # Range: 0.0 (no throttle) to 1.0 (maximum throttle)
+    steering = 0.0  # Range: -1.0 (maximum left) to 1.0 (maximum right)
+
+    # Apply the control signal to the vehicle
+    vehicle.apply_control(carla.VehicleControl(throttle=throttle, steer=steering))
+
     world.tick()
 
 sensor.stop()  # Stop the sensor
