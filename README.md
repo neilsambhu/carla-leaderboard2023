@@ -701,3 +701,7 @@ grep -r --exclude outgrep.txt -e "LeaderboardEvaluator" |& tee outgrep.txt
 ```
 grep -F -r --exclude outgrep.txt -e ".sensor" |& tee outgrep.txt
 ```
+6/18/2023 2:51 PM: find printout of results
+```
+grep -r --exclude outgrep.txt -e "Results of " |& tee outgrep.txt
+```
